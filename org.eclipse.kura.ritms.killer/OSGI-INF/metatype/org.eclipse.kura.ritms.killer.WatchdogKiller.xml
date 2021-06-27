@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MetaData xmlns="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="en_us">
+    <OCD id="org.eclipse.kura.ritms.killer.WatchdogKiller"
+         name="Watchdog killer" 
+         description="Watchdog emulator, using for test kura watchdog. Stops poll at the command">
+        <Icon resource="OSGI-INF/wk.png" size="32"/>            
+        <AD id="pollwatchdog"  
+            name="poll watchdog"
+            type="String"
+            cardinality="0" 
+            required="true"
+            default="activate" 
+            description="Poll watchdog">
+            <Option label="activate" value="activate"/>
+            <Option label="deactivate" value="deactivate"/>
+		</AD>
+
+    </OCD>
+    <Designate pid="org.eclipse.kura.ritms.killer.WatchdogKiller">
+        <Object ocdref="org.eclipse.kura.ritms.killer.WatchdogKiller"/>
+    </Designate>
+</MetaData>
